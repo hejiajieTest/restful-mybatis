@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>cn.ffcs.tsp</groupId>
+    <artifactId>restful-mybatis</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <groupId>cn.ffcs.tsp</groupId>
+  <artifactId>restful-provider</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>restful-provider Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+     <!-- 项目中service接口依赖 -->
+    <dependency>
+    	 <groupId>cn.ffcs.tsp</groupId>
+ 		 <artifactId>restful-api</artifactId>
+  		<version>1.0.0-SNAPSHOT</version>
+    </dependency>
+    <!--Spring start -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.1.4.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>4.1.4.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>4.1.4.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>4.1.4.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>4.1.4.RELEASE</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/aspectj/aspectjweaver -->
+		<dependency>
+		    <groupId>aspectj</groupId>
+		    <artifactId>aspectjweaver</artifactId>
+		    <version>1.5.2</version>
+		</dependency>
+  	<!-- spring end -->
+  	
+  	<!-- dubbo jar-->
+    <dependency>
+  		<groupId>com.alibaba</groupId>
+        <artifactId>dubbo</artifactId>
+        <version>2.5.3</version>
+        <exclusions>
+			<exclusion>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring</artifactId>
+            </exclusion>
+	  	</exclusions>
+  	</dependency> 
+  	     <!-- mybatis start -->
+  		<dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.2.8</version>
+  		</dependency>
+  		 <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+  	<!-- mybatis end -->
+  	 <!--alibaba 数据库连接池 start-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.12</version>
+        </dependency>
+  	<!-- alibaba 数据库连接池 end -->
+  	  <!-- mysql驱动包  start-->  
+         <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.0.8</version>
+        </dependency>
+      <!-- mysql驱动包 end --> 
+    <dependency>
+		<groupId>com.101tec</groupId>
+        <artifactId>zkclient</artifactId>
+       <version>0.4</version>
+	</dependency>
+	<dependency>
+	<groupId>org.springframework</groupId>
+     		<artifactId>spring-webmvc</artifactId>
+     		<version>4.1.4.RELEASE</version>
+ 	</dependency>
+  </dependencies>
+
+  <build>
+    <finalName>restful-provider</finalName>
+  </build>
+</project>
